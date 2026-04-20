@@ -1,0 +1,38 @@
+-----------------------------------------------Circuit Diagram--------------------------------------------------
+
+______1.54" e-paper Display connection to ESP-32_____
+Display                          Esp-32
+Vcc      -------------------->    3.3v
+GND      -------------------->    GND
+Din(MOSI) ------------------->    23
+CLK(SCK)  ------------------->    18
+CS        ------------------->    5
+DC        ------------------->    2
+RST       ------------------->    15
+BUSY      ------------------->    4
+
+
+______SD Module Connection to ESP32______
+SD module                         Esp-32
+Vcc       ------------------->     Vin/5v
+GND       ------------------->     GND
+MISO(D0)  ------------------->     19
+MOSI(DI)  ------------------->     23
+SCK(CLK)  ------------------->     18
+CS        ------------------->     13
+
+
+______Push button for next/previous page connection to esp-32______
+Button                             ESP32
+Next page  ------------------->     32
+Previous page ---------------->     33
+
+
+______Battery(3.7v reachargeable [1x]) to TP4056(Charging module) to esp32______
+Battery                 TP4056                 esp32
+Pos(+) ---------------> B+ | OUT+ ----------->  Vin
+Neg(-) ---------------> B- | OUT= ----------->  GND
+
+You can also add boost converter to provide 5v input for sd card module for better efficiency. 
+
+------------All the GNDs should be common---------------
